@@ -50,7 +50,7 @@
       
       
       
-        echo "<td>$post_status</td>;";
+        echo "<td>$post_status</td>";
         echo "<td><img src='../images/$post_image' width='100px' alr='image'</td>";
         echo "<td>$post_tags</td>";
         echo "<td>$post_comment_count</td>";
@@ -74,6 +74,7 @@
     $the_post_id = $_GET['delete'];
     $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
     $delete_query = mysqli_query($connection, $query);
+    header("Location: posts.php");
   }
     
 ?>

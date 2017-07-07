@@ -33,9 +33,7 @@
                   
                   ?>
                    
-                   
-                   
-                   
+
                     <h4>Blog Categories</h4>
                     <div class="row">
                         <div class="col-lg-12">
@@ -45,7 +43,8 @@
                               
                               while($row = mysqli_fetch_array($select_categories_sidebar)){
                                   $cat_title = $row['cat_title'];
-                                  echo "<li><a href='#'>{$cat_title}</a></li>";
+                                  $cat_id = $row['cat_id'];
+                                  echo "<li><a href='category.php?category=$cat_id'>{$cat_title}</a></li>";
 
                                 }
                               ?>
